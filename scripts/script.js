@@ -6,12 +6,14 @@
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
-  const currentTheme = [...document.documentElement.classList]
+  const getCurrentTheme = () => [...document.documentElement.classList]
     .find((cn) => cn.startsWith('theme-'))
     ?.replace('theme-', '');
   const themeButtons = [
     ...document.querySelectorAll('.header__theme-menu-button'),
   ];
+  let currentTheme = getCurrentTheme();
+
   setActiveButton(themeButtons, currentTheme);
 
   themeButtons.forEach((button) => {
@@ -21,7 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
         .split('_type_')[1];
       setTheme(chosenTheme);
       setActiveButton(themeButtons, chosenTheme);
+      currentTheme = chosenTheme;
     });
+  });
+
+  const themeObserver = new MutationObserver(() => {
+    const nextTheme = getCurrentTheme();
+
+    if (nextTheme !== currentTheme) {
+      currentTheme = nextTheme;
+      setActiveButton(themeButtons, currentTheme);
+    }
+  });
+
+  themeObserver.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['class'],
   });
 });
 
