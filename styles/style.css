@@ -1,7 +1,7 @@
 .page {
   background-color: var(--page-bg-color);
   background-image: var(--page-bg-image);
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -120,6 +120,16 @@
 .header__theme-menu-button_active {
   border-color: currentColor;
   pointer-events: none;
+}
+
+:root.theme-light .header__theme-menu-button_type_light {
+  border-color: currentColor;
+  pointer-events: none;
+}
+
+:root.theme-light .header__theme-menu-button_type_auto {
+  border-color: transparent;
+  pointer-events: auto;
 }
 
 .page-title {
@@ -266,6 +276,20 @@
 .footer__title {
   text-align: center;
   text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root.theme-auto .header__theme-menu-button_type_light,
+  :root:not(.theme-dark):not(.theme-light) .header__theme-menu-button_type_light {
+    border-color: currentColor;
+    pointer-events: none;
+  }
+
+  :root.theme-auto .header__theme-menu-button_type_auto,
+  :root:not(.theme-dark):not(.theme-light) .header__theme-menu-button_type_auto {
+    border-color: transparent;
+    pointer-events: auto;
+  }
 }
 
 @media (width >= 768px) {
