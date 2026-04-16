@@ -131,7 +131,8 @@
   max-inline-size: 355px;
   line-height: 23px;
   justify-self: end;
-  align-self: center;
+  align-self: end;
+  margin-block-end: 56px;
   color: var(--title-decor-text-color);
   font-weight: 700;
 }
@@ -366,6 +367,7 @@
   }
 
   .header__title {
+    grid-row: 1 / 4;
     grid-column: 1 / 4;
     align-self: center;
   }
