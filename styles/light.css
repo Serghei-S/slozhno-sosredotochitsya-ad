@@ -1,29 +1,35 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
 :root.theme-light {
-  --bg-image: url("../images/cover-image-light.png");
-  --background-color-page: #fff1f7;
-  --background-color: #ff8dcb;
+  --bg-image: none;
   --title-color: #ffc2e6;
+  --background-color: #ff8dcb;
+  --text-color: #353430;
+  --background-color-page: #fff1f7;
   --button-color: #353430;
   --par-color: #353430;
   --par-main-color: #353430;
   --subtitles-color: #353430;
   --title-main-color: #353430;
   --label-color: transparent;
-  --rec-display: none;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-image: url("../images/cover-image-light.png");
-    --background-color-page: #fff1f7;
-    --background-color: #ff8dcb;
+    --bg-image: none;
     --title-color: #ffc2e6;
+    --background-color: #ff8dcb;
+    --text-color: #f1b2ce;
+    --background-color-page: #fff1f7;
     --button-color: #353430;
-    --par-color: #353430;
     --par-main-color: #353430;
     --subtitles-color: #353430;
     --title-main-color: #353430;
     --label-color: transparent;
-    --rec-display: none;
   }
+  /* Остальные стили, только при необходимости */
 }

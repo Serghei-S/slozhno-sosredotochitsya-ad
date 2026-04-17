@@ -1,14 +1,15 @@
+/* Светлая тема по умолчанию */
 :root {
-  --main-font: "IBM Plex mono", "Courier New", Courier, monospace, sans-serif;
-  --bg-image: url("../images/cover-image-dark.png");
-  --background-color-page: #000028;
-  --background-color: #ff0070;
-  --title-color: #db00ff;
-  --button-color: #ff0070;
-  --par-color: #000028;
-  --par-main-color: #f1b2ce;
-  --subtitles-color: #000028;
-  --title-main-color: #ff0070;
-  --label-color: #ff0070;
-  --rec-display: inline-flex;
+  --bg-image: none;
+  --title-color: #FFC2E6;
+  --background-color: #FF8DCB;
+  --text-color: #353430;
+  --background-color-page: #FFF1F7;
+  --button-color: #353430;
+  --par-color: #353430;
+  --par-main-color: #353430;
+  --subtitles-color: #353430;
+  --title-main-color: #353430;
+  --label-color: #FF0070; /* REC по умолчанию скрыт в светлой теме */
+  --rec-display: none;
 }

@@ -1,13 +1,31 @@
 :root.theme-dark {
-  --bg-image: url("../images/cover-image-dark.png");
-  --background-color-page: #000028;
-  --background-color: #ff0070;
-  --title-color: #db00ff;
-  --button-color: #ff0070;
-  --par-color: #000028;
-  --par-main-color: #f1b2ce;
+  --bg-image: url('../images/cover-image-dark.png');
+  --title-color: #DB00FF;
+  --background-color: #FF0070;
+  --button-color: #FF0070;
+  --text-color: #FF0070;
   --subtitles-color: #000028;
-  --title-main-color: #ff0070;
-  --label-color: #ff0070;
-  --rec-display: inline-flex;
+  --background-color-page: #000028;
+  --par-color: #000028;
+  --par-main-color: #F1B2CE;
+  --title-main-color: #FF0070;
+  --label-color: #FF0070;
+  --rec-display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-image: url('../images/cover-image-dark.png');
+    --title-color: #DB00FF;
+    --background-color: #FF0070;
+    --button-color: #FF0070;
+    --text-color: #FF0070;
+    --subtitles-color: #000028;
+    --background-color-page: #000028;
+    --par-color: #000028;
+    --par-main-color: #F1B2CE;
+    --title-main-color: #FF0070;
+    --rec-color: #FF0070;
+    --rec-display: inline-block;
+  }
 }
